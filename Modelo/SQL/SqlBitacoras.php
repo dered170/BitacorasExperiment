@@ -23,8 +23,10 @@ class SqlBitacoras {
 //    public static function login(){
 //    }
 
-    public static function consulta_usuarios() {
-        $query = 'SELECT * FROM ' . self::$tabla_usuarios . '';
+    public static function sql_login() {
+        $query = 'SELECT * FROM ' . self::$tabla_usuarios .' WHERE '.
+                self::$usuario.' = :usuario AND '.
+                self::$contrasena.' = :contrasena';
         return $query;
     }
 

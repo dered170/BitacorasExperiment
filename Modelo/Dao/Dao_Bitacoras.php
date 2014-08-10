@@ -7,6 +7,7 @@
  */
 require_once $_SERVER['DOCUMENT_ROOT'] . '/BitacorasExperiment/Modelo/SQL/SqlBitacoras.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/BitacorasExperiment/Modelo/Db/Conexion.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/BitacorasExperiment/Modelo/Beans/Mensaje.php';
 
 class Dao_Bitacoras {
 
@@ -16,16 +17,25 @@ class Dao_Bitacoras {
         $this->con = new Conexion();
     }
 
-    public function consulta() {
-        //$con = $this->con->get_db_con();
-        $statement = SqlBitacoras::consulta_usuarios();
-        //var_dump($statement);
-        $_stmt = $this->con->query($statement);
-        var_dump($_stmt);
+    public function daoLogin($datos) {
+        $msg = new Mensaje();
+        $statement = SqlBitacoras::sql_login();
+        $datos = Array(
+            ':usuario' => $datos->usuario,
+            ':contrasena' => $datos->contrasena);
+        $_stmt = $this->con->query($statement, $datos);
+        if ($_stmt->fetch(PDO::FETCH_NUM) == 0) {
+            $msg->msj = "Usuario Invalido :(";
+            $msg->tipo = "Error";
+            return $msg;
+        }
+        $msg->msj = "Usuario Valido :D";
+        $msg->tipo = "Exito";
+        return $msg;
     }
 
 }
 
-$inst = new Dao_Bitacoras();
-$inst->consulta();
+//$inst = new Dao_Bitacoras();
+//$inst->consulta();
 //echo $inst->consulta();

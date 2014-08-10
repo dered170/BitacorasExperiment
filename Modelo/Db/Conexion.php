@@ -31,7 +31,7 @@ class Conexion {
 
     public function set_db_con() {
         try {
-            $con = new PDO($this->_dns, $this->_user, $this->_pass);
+            $con = new PDO($this->_dns, $this->_user, $this->_pass,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $this->_dbcon = $con;
         } catch (PDOException $ex) {
@@ -46,7 +46,8 @@ class Conexion {
             $_conx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $_stmt = $_conx->prepare($_sql);
             $_stmt->execute($_datos);
-            return $_stmt->fetchAll(PDO::FETCH_ASSOC);
+            //return $_stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $_stmt;
         } catch (PDOException $e) {
             return 'Error: ' . $e->getMessage();
         }

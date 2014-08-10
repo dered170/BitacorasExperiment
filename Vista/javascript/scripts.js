@@ -7,3 +7,15 @@ $(document).ready(function(){
     
 });
 
+function login(){
+    $.ajax({
+       type: "POST",
+       url: "../Controlador/Controller_Bitacoras.php",
+       data: $('#login').serialize()+"&case=1",
+       success: function (data){
+           json = JSON.parse(data);
+           alert(json.mensaje);
+       }      
+    });
+}
+

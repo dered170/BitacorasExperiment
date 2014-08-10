@@ -9,12 +9,14 @@
         <title>Formulario de Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="librerias/jquery-1.11.1.js"></script>
+        <script src="javascript/scripts.js"></script>
     </head>
     <body>
-        <form action="" method="POST">
-            <input type="text" id="usuario" class="contrasena" placeholder="usuario">
-            <input type="password" id="contrasena" class="contrasena" placeholder="contrasena">
-            <input type="button" value="Ingresar">
+        <form action="" method="POST" id="login">
+            <input type="text" name="usuario" id="usuario" class="contrasena" placeholder="usuario">
+            <input type="password" name="contrasena" id="contrasena" class="contrasena" placeholder="contrasena">
+            <input type="button" value="Ingresar" onclick="login();">
         </form>
     </body>
 </html>

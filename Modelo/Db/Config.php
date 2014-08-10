@@ -10,7 +10,7 @@ header("Content-type: text/html; charset=utf8");
 //Definición de constantes de conexión
 define('CON_HOST', 'localhost');
 define('CON_USER', 'root');
-define('CON_PASS', 'root');
+define('CON_PASS', 'admin');
 define('CON_DB', 'sis_bitacoras');
 
 
