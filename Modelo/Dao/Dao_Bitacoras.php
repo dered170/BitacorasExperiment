@@ -25,11 +25,11 @@ class Dao_Bitacoras {
             ':contrasena' => $datos->contrasena);
         $_stmt = $this->con->query($statement, $datos);
         if ($_stmt->fetch(PDO::FETCH_NUM) == 0) {
-            $msg->msj = "Usuario Invalido :(";
+            $msg->msj = "<strong>Advertencia:</strong> Nombre de usuario o contraseña es invalido.";
             $msg->tipo = "Error";
             return $msg;
         }
-        $msg->msj = "Usuario Valido :D";
+        $msg->msj = "<strong>Exito:</strong> Ingresando...";
         $msg->tipo = "Exito";
         return $msg;
     }

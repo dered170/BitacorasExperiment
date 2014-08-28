@@ -7,4 +7,27 @@
     Created on : 5/08/2014, 10:26:21 PM
     Author     : angelopw
 */
+body{
+    background-image: url("../img/p6.png");
+}
+.box-form{
+
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 300px;
+    padding: 20px;  
+    border-radius: 5px 5px 0px 0px;
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(50, 50, 50, 0.26);
+    -moz-box-shadow:    0px 0px 17px 0px rgba(50, 50, 50, 0.26);
+    box-shadow:         0px 0px 17px 0px rgba(50, 50, 50, 0.26);
+}
+.alert-container{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 15px;
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(50, 50, 50, 0.26);
+    -moz-box-shadow:    0px 0px 17px 0px rgba(50, 50, 50, 0.26);
+    box-shadow:         0px 0px 17px 0px rgba(50, 50, 50, 0.26);
+}
 

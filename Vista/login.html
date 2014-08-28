@@ -10,15 +10,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="librerias/jquery-1.11.1.js"></script>
-        <link rel="stylesheet" href="librerias/bootstrap-3.2.0/bootstrap.css">
+        <link rel="stylesheet" href="librerias/bootstrap-3.2.0/css/bootstrap.css">
+        <link rel="stylesheet" href="css/estilos.css">
         <script src="javascript/scripts.js"></script>
     </head>
     <body>
-        <form action="" method="POST" id="login">
+        <form role="form" method="POST" id="login" class="box-form">
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Nombre de usuario">
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
+            </div>
+            <input type="button" id="enviar" class="btn btn-primary" value="Ingresar" onclick="login();">
+        </form>
+        <div class="alert-container"></div>
+        
+        <!--<form action="" method="POST" id="login">
             <input type="text" name="usuario" id="usuario" class="contrasena" placeholder="usuario">
             <input type="password" name="contrasena" id="contrasena" class="contrasena" placeholder="contrasena">
             <input type="button" value="Ingresar" onclick="login();">
-        </form>
+        </form>-->
     </body>
 </html>
 

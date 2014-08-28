@@ -1,5 +1,4 @@
 <?php
-
 /*
  * @Sistema de Bitácoras electrónicas. "Bo_Bitacoras.php"
  * @versión: 1.0  @modificado: 6 de Agosto del 2014
@@ -27,8 +26,8 @@ class Bo_Bitacoras {
             return $this->dao->daoLogin($datos);
             
         } else {
-            $msg->tipo = "Error";
-            $msg->msj = "Error: Existen Campos Vacios";
+            $msg->tipo = "Vacio";
+            $msg->msj = "<strong>Error:</strong> Existen campos vacios ";
             return $msg;
         }
     }
