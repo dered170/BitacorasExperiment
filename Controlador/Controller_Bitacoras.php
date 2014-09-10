@@ -24,6 +24,9 @@ function login() {
     $Datos->usuario = htmlentities(trim($_POST['usuario']));
     $Datos->contrasena = htmlentities(trim($_POST['contrasena']));
     $resp = $Control->controlLogin($Datos);
-    $mensaje = Array('tipo' => $resp->tipo, 'mensaje' => $resp->msj);
+    $mensaje = Array(
+        'tipo' => $resp->tipo, 
+        'mensaje' => $resp->msj, 
+        'url' => $resp->pag);
     echo json_encode($mensaje);
 }

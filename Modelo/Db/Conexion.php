@@ -46,7 +46,6 @@ class Conexion {
             $_conx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $_stmt = $_conx->prepare($_sql);
             $_stmt->execute($_datos);
-            //return $_stmt->fetchAll(PDO::FETCH_ASSOC);
             return $_stmt;
         } catch (PDOException $e) {
             return 'Error: ' . $e->getMessage();

@@ -20,13 +20,16 @@ class SqlBitacoras {
     private static $idinfo_usuario = 'idinfo_usuario';
     private static $status = 'status';
 
-//    public static function login(){
-//    }
-
     public static function sql_login() {
-        $query = 'SELECT * FROM ' . self::$tabla_usuarios .' WHERE '.
-                self::$usuario.' = :usuario AND '.
-                self::$contrasena.' = :contrasena';
+        $query = 'SELECT * FROM ' . self::$tabla_usuarios . ' WHERE ' .
+                self::$usuario . ' = :usuario AND ' .
+                self::$contrasena . ' = :contrasena';
+        return $query;
+    }
+
+    public static function sql_rol() {
+        $query = 'SELECT ' . self::$usuario . ', ' . self::$status . ',' . self::$idrol_usuario . ' FROM ' .
+                self::$tabla_usuarios . ' WHERE ' . self::$usuario . ' = :usuario';
         return $query;
     }
 

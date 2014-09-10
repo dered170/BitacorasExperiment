@@ -11,6 +11,7 @@ class Mensaje {
     var $tipo;
     var $msj;
     var $datos;
+    var $pag;
     private $data;
 
     public function __set($name, $value) {

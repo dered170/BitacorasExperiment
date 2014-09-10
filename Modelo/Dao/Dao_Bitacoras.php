@@ -7,7 +7,6 @@
  */
 require_once $_SERVER['DOCUMENT_ROOT'] . '/BitacorasExperiment/Modelo/SQL/SqlBitacoras.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/BitacorasExperiment/Modelo/Db/Conexion.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/BitacorasExperiment/Modelo/Beans/Mensaje.php';
 
 class Dao_Bitacoras {
 
@@ -18,24 +17,24 @@ class Dao_Bitacoras {
     }
 
     public function daoLogin($datos) {
-        $msg = new Mensaje();
         $statement = SqlBitacoras::sql_login();
         $datos = Array(
             ':usuario' => $datos->usuario,
             ':contrasena' => $datos->contrasena);
         $_stmt = $this->con->query($statement, $datos);
         if ($_stmt->fetch(PDO::FETCH_NUM) == 0) {
-            $msg->msj = "<strong>Advertencia:</strong> Nombre de usuario o contraseña es invalido.";
-            $msg->tipo = "Error";
-            return $msg;
+            return false;
         }
-        $msg->msj = "<strong>Exito:</strong> Ingresando...";
-        $msg->tipo = "Exito";
-        return $msg;
+        return true;
+    }
+
+    public function verificaRol($usuario) {
+        $statement = SqlBitacoras::sql_rol();
+        $datos = Array(
+            ':usuario' => $usuario);
+        $_stmt = $this->con->query($statement, $datos);
+        $result = $_stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
     }
 
 }
-
-//$inst = new Dao_Bitacoras();
-//$inst->consulta();
-//echo $inst->consulta();

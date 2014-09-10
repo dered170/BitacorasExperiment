@@ -23,6 +23,7 @@ function login() {
             if (json.tipo === "Exito") {
                 var item = $("<div class='alert alert-success'>" + json.mensaje + "</div>").hide().fadeIn(150);
                 $(".alert-container").html(item);
+                setTimeout("location.href='../Vista/"+json.url+"'",1500);
             } else if (json.tipo === "Error") {
                 var item = $("<div class='alert alert-warning'>" + json.mensaje + "</div>").hide().fadeIn(150);
                 $(".alert-container").html(item);

@@ -19,8 +19,10 @@ class Sessiones {
         return false;
     }
 
-    public static function set_var($key, $value) {
-        $_SESSION[$key] = $value;
+    public static function set_var($data) {
+        foreach($data as $key => $value){
+            $_SESSION[$key] = $value;
+        }
     }
 
     public static function get_var($key) {
