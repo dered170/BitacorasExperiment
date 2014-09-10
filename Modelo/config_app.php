@@ -1,7 +1,7 @@
 <?php
 /*
- * @Sistema de Bitácoras electrónicas. "Dao_Bitacoras.php"
- * @versión: 1.0  @modificado: 6 de Agosto del 2014
+ * @Sistema de Bitácoras electrónicas. "config_app.php"
+ * @versión: 1.0  @modificado: 9 de Septiembre del 2014
  * @autor: Luis Pastén
  */
 
