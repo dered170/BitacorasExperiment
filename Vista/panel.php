@@ -8,5 +8,9 @@ echo Sessiones::get_var('rol');
 
 ?>
 <div class="wrapper">
+
+<!-- comentando para -->
+<input type="text">
+
+</div>
 	
-</div><input type="text">
