@@ -8,5 +8,6 @@ echo Sessiones::get_var('rol');
 
 ?>
 <div class="wrapper">
+<input type="text">
+</div>
 	
-</div><input type="text">
