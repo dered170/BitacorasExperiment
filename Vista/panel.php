@@ -6,3 +6,7 @@ Sessiones::construir_session();
 echo Sessiones::get_var('usuario');
 echo Sessiones::get_var('rol');
 
+?>
+<div class="wrapper">
+	
+</div><input type="text">
