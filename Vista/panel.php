@@ -13,5 +13,6 @@ echo Sessiones::get_var('rol');
 <input type="text">
 LE SUBI UN CAMBIO 
 le subi otro cambio!!! XD
+le subi un tercer cambio !! xD
 </div>
 	
