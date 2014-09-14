@@ -11,6 +11,6 @@ echo Sessiones::get_var('rol');
 
 <!-- comentando para -->
 <input type="text">
-
+LE SUBI UN CAMBIO 
 </div>
 	
