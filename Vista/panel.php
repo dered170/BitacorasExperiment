@@ -14,5 +14,6 @@ echo Sessiones::get_var('rol');
 LE SUBI UN CAMBIO 
 le subi otro cambio!!! XD
 le subi un tercer cambio !! xD
+un cambio extra
 </div>
 	
