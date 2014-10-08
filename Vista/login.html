@@ -10,29 +10,75 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="librerias/jquery-1.11.1.js"></script>
-        <link rel="stylesheet" href="librerias/bootstrap-3.2.0/css/bootstrap.css">
-        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/animaciones.css">
+        <link rel="stylesheet" href="css/animate.css">
         <script src="javascript/scripts.js"></script>
     </head>
-    <body>
-        <form role="form" method="POST" id="login" class="box-form">
-            <div class="form-group">
-                <label for="usuario">Usuario</label>
-                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Nombre de usuario">
-            </div>
-            <div class="form-group">
-                <label for="contrasena">Contraseña</label>
-                <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
-            </div>
-            <input type="button" id="enviar" class="btn btn-primary" value="Ingresar" onclick="login();">
-        </form>
-        <div class="alert-container"></div>
+    <body class="animated fadeInDown">
+    <header>
+        <h1>login <span>[ Lorem ipsum dolor sit amet, ]</span></h1>
+    </header>
+    <section class="container">
+        <section class="video">
+            <video id="video1" autoplay=""  loop="" >
+                <source src="video/videologin.mp4" type="video/mp4">
+                <source src="video/videologin.ogg" type="video/ogg">
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+        <section class="maskedvideo"></section>
+        <section class="cuerpologin">
+            <section class="ctnlogin">
+                <form role="form" method="POST" id="login" class="form-fancy">
+                    <div class="form-group">
+                        <input type="text" class="input-universal user" id="usuario" name="usuario" placeholder="Nombre de usuario">
+                        <input type="password" class="input-universal password" id="contrasena" name="contrasena" placeholder="Contraseña">
+                    </div>
+                    <input type="button" id="enviar" class="submit-log" value="Ingresar" onclick="login();">
+                </form>
+                <div class="alert-container">
+                    <div class="box-notificacion box-success ns-effect-bouncyflip ns-show">
+                        <div class="caja1">
+                            <span class="ns-icon">
+                                
+                            </span>
+                            <p>
+                                No se ha podido iniciar sesion,No se ha podido iniciar sesion
+                            </p>
+                        </div>
+                        <span class="ns-close"></span>
+                    </div>
+                    <div class="box-notificacion box-warning ns-effect-bouncyflip ns-show">
+                        <div class="caja1">
+                            <span class="ns-icon">
+                                
+                            </span>
+                            <p>
+                                No se ha podido iniciar sesion,No se ha podido iniciar sesion
+                            </p>
+                        </div>
+                        <span class="ns-close"></span>
+                    </div>
+                    <div class="box-notificacion box-error ns-effect-bouncyflip ns-show">
+                        <div class="caja1">
+                            <span class="ns-icon">
+                                
+                            </span>
+                            <p>
+                                No se ha podido iniciar sesion,No se ha podido iniciar sesion
+                            </p>
+                        </div>
+                        <span class="ns-close"></span>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
         
-        <!--<form action="" method="POST" id="login">
-            <input type="text" name="usuario" id="usuario" class="contrasena" placeholder="usuario">
-            <input type="password" name="contrasena" id="contrasena" class="contrasena" placeholder="contrasena">
-            <input type="button" value="Ingresar" onclick="login();">
-        </form>-->
+
+
     </body>
 </html>
 
